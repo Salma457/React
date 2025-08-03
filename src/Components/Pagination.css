@@ -1,0 +1,107 @@
+/* Pagination.css */
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 2rem 0;
+    user-select: none;
+  }
+  
+  .page-numbers {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .page-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .page-number:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .page-number.active {
+    background: linear-gradient(135deg, #6e45e2 0%, #8b5cf6 100%);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(110, 69, 226, 0.3);
+    transform: scale(1.05);
+  }
+  
+  .pagination-arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .pagination-arrow:hover:not(.disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .pagination-arrow.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .arrow-icon {
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .pagination-container {
+      gap: 5px;
+    }
+    
+    .page-number {
+      width: 36px;
+      height: 36px;
+      font-size: 0.9rem;
+    }
+    
+    .pagination-arrow {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page-numbers {
+      gap: 5px;
+    }
+    
+    .page-number {
+      width: 32px;
+      height: 32px;
+      font-size: 0.85rem;
+    }
+    
+    .pagination-arrow {
+      width: 32px;
+      height: 32px;
+    }
+  }
